@@ -1,0 +1,77 @@
+/*----------------------------------------------
+#  Extension Name : Dynamixel
+#  Created by Louis Smith on Oct. 10, 2011.
+----------------------------------------------*/
+
+-> Requirements
+OS : Windows
+
+
+-> Install Guideline
+# cd ./path/DynamixelSDK-for-Ruby
+# ruby ./Run.rb
+The extension will be generated at the folder.
+Extension name : dynamixel.so
+
+
+-> Class Methods:
+Dynamixel.initialize
+Dynamixel.terminate
+Dynamixel.set_txpacket_id
+Dynamixel.set_txpacket_instruction
+Dynamixel.set_txpacket_parameter
+Dynamixel.set_txpacket_length
+Dynamixel.get_rxpacket_error
+Dynamixel.get_rxpacket_parameter
+Dynamixel.get_rxpacket_length
+Dynamixel.makeword
+Dynamixel.get_lowbyte
+Dynamixel.get_highbyte
+Dynamixel.tx_packet
+Dynamixel.rx_packet
+Dynamixel.txrx_packet
+Dynamixel.get_result
+Dynamixel.ping
+Dynamixel.read_byte
+Dynamixel.write_byte
+Dynamixel.read_word
+Dynamixel.write_word
+
+
+-> Constants:
+Dynamixel::BROADCAST_ID
+Dynamixel::INST_PING
+Dynamixel::INST_READ
+Dynamixel::INST_WRITE
+Dynamixel::INST_REG_WRITE
+Dynamixel::INST_ACTION
+Dynamixel::INST_RESET
+Dynamixel::INST_SYNC_WRITE
+Dynamixel::MAXNUM_TXPARAM
+Dynamixel::MAXNUM_RXPARAM
+Dynamixel::ERRBIT_VOLTAGE
+Dynamixel::ERRBIT_ANGLE
+Dynamixel::ERRBIT_OVERHEAT
+Dynamixel::ERRBIT_RANGE
+Dynamixel::ERRBIT_CHECKSUM
+Dynamixel::ERRBIT_OVERLOAD
+Dynamixel::ERRBIT_INSTRUCTION
+Dynamixel::COMM_TXSUCCESS
+Dynamixel::COMM_RXSUCCESS
+Dynamixel::COMM_TXFAIL
+Dynamixel::COMM_RXFAIL
+Dynamixel::COMM_TXERROR
+Dynamixel::COMM_RXWAITING
+Dynamixel::COMM_RXTIMEOUT
+Dynamixel::COMM_RXCORRUPT
+
+
+-> Example
+# [ Import Ext. Library ] #---------------------------------------------#
+require 'Dynamixel'
+Dynamixel.write_word(1, 32, 50)  # Change Motor Speed
+
+
+-> Reference
+ROBOTIS e-Manual
+http://support.robotis.com/en/
